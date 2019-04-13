@@ -13,16 +13,22 @@
  }
 
 def help
-  commands = {"h" => "help", "l" => "list", "p" => "play", "e" => "exit"}
-    return commands
+  #this method should be the same as in jukebox.rb
+  puts "I accept the following commands:
+        - help : displays this help message
+        - list : displays a list of songs you can play
+        - play : lets you choose a song to play
+        - exit : exits this program"
 end
 
 
 
 def list(my_songs)
-  #this method is different! Collect the keys of the my_songs hash and 
+  #this method is different! Collect the keys of the my_songs hash and
   #list the songs by name
+  my_songs.map { |song, file| puts "#{song}"}
 end
+#list(my_songs)
 
 
 def play(my_songs)
@@ -33,13 +39,38 @@ def play(my_songs)
   #if it isn't, tell them their choice is invalid
   #if it is, play the song using the system 'open <file path>' syntax
   #get the file path of the song by looking it up in the my_songs hash
-  
+  puts "Please enter a song name:"
+  requested_song = gets.chomp
+  my_songs.each do |song, file|
+    if requested_song == song
+      puts "Playing #{song}"
+      system "xdg-open #{file}"
+      return
+    end
+  end
+  puts "Invalid input, please try again"
 end
 
 def exit_jukebox
   #this method is the same as in jukebox.rb
+  puts "Goodbye"
 end
 
 def run(my_songs)
   #this method is the same as in jukebox.rb
+  help
+  loop do
+  puts "Please enter a command:"
+  response = gets.chomp
+  if response == "list"
+    list(my_songs)
+  elsif response == "play"
+    play(my_songs)
+  elsif response == "help"
+    help
+  elsif response == "exit"
+    exit_jukebox
+    break
+  end
+  end
 end
