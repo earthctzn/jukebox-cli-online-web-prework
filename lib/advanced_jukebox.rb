@@ -13,8 +13,8 @@
 # }
 
 def help
-  #this method should be the same as in jukebox.rb
-
+  commands = {"h" => "help", "l" => "list", "p" => "play", "e" => "exit"}
+    return commands
 end
 
 
