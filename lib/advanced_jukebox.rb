@@ -13,7 +13,7 @@
  }
 
 def help
-  commands = {"?=" => "help", "l" => "list", "p" => "play", "e" => "exit"}
+  commands = {(?=.*help)(?=.*list)(?=.*play)(?=.*exit)}
   commands.each {|i, command|puts i, command}
 end
 
