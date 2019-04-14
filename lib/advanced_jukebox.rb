@@ -41,7 +41,7 @@ def play(my_songs)
 end
 
 def exit_jukebox
-  puts "Good bye" #this method is the same as in jukebox.rb
+  puts "Goodbye" #this method is the same as in jukebox.rb
 end
 
 def run(my_songs)
