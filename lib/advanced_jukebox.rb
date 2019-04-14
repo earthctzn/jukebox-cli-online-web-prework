@@ -14,7 +14,7 @@
 
 def help
   commands = {(?=.*help)(?=.*list)(?=.*play)(?=.*exit)}
-  commands.each {|i, command|puts i, command}
+  commands.each {|i, command|print i, command}
 end
 
 
