@@ -43,24 +43,7 @@ puts "Please enter a song name or number:"
   puts "Invalid input, please try again"
 end
 
-def run(my_songs)
-  #this method is the same as in jukebox.rb
-  help
-  loop.do 
-    puts "Please enter a command:"
-  response = gets.chomp
-  if response == "list"
-    list(my_songs)
-  elsif response == "play"
-    play(my_songs)
-  elsif response == "help"
-    help
-  elsif response == "exit"
-    exit_jukebox
-    break
-  end
-  end
-end
+
 
 def exit_jukebox
   puts "Goodbye"
