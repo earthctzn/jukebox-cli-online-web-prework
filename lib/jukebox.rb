@@ -49,7 +49,7 @@ end
 
 def run(my_songs)
   help
-  loop.do 
+  loop do 
     puts "Please enter a command:" 
     response = gets.chomp 
     if response == "list"
@@ -60,5 +60,6 @@ def run(my_songs)
       help
     elsif response == "exit"
       exit_jukebox
+      break
    end
 end
