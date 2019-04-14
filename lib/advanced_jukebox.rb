@@ -14,7 +14,7 @@
 
 def help
   commands = {"h" => "help", "l" => "list", "p" => "play", "e" => "exit"}
-  commands.each {|i, command|puts command
+  commands.each {|i, command|puts command}
 end
 
 
