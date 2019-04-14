@@ -39,7 +39,7 @@ def play(my_songs)
   #get the file path of the song by looking it up in the my_songs hash
   puts "Please enter a song name or number:"
   requested_song = gets.chomp
-  songs.each_with_index do |song, i|
+  my_songs.each_with_index do |song, i|
     if requested_song == song || requested_song.to_i == (i+1)
       puts "Playing #{song}"
       return
