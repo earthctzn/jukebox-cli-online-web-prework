@@ -68,5 +68,6 @@ def run(my_songs)
     elsif response == "exit"
       exit_jukebox
       break
-   end
+    end
+  end
 end
