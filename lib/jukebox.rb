@@ -33,6 +33,18 @@ def list(my_songs)
   my_songs.collect { |song, file| puts "#{song}"}
 end
 
+puts "Please enter a song name or number:"
+  requested_song = gets.chomp
+  songs.each_with_index do |song, i|
+    if requested_song == song || requested_song.to_i == (i+1)
+      puts "Playing #{song}"
+      return
+    end
+  end
+  puts "Invalid input, please try again"
+end
+
+
 def exit_jukebox
   puts "Goodbye" #this method is the same as in jukebox.rb
 end
