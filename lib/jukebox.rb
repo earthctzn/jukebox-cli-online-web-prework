@@ -28,8 +28,6 @@ def help
 end
 
 def list(my_songs)
-#this method is different! Collect the keys of the my_songs hash and 
-  #list the songs by name
   my_songs.collect { |song, file| puts "#{song}"}
 end
 
@@ -45,9 +43,27 @@ puts "Please enter a song name or number:"
   puts "Invalid input, please try again"
 end
 
+def run(my_songs)
+  #this method is the same as in jukebox.rb
+  help
+  loop.do 
+    puts "Please enter a command:"
+  response = gets.chomp
+  if response == "list"
+    list(my_songs)
+  elsif response == "play"
+    play(my_songs)
+  elsif response == "help"
+    help
+  elsif response == "exit"
+    exit_jukebox
+    break
+  end
+  end
+end
 
 def exit_jukebox
-  puts "Goodbye" #this method is the same as in jukebox.rb
+  puts "Goodbye"
 end
 
 
