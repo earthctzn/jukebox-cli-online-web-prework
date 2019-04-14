@@ -32,3 +32,9 @@ def list(my_songs)
   #list the songs by name
   my_songs.collect { |song, file| puts "#{song}"}
 end
+
+def exit_jukebox
+  puts "Goodbye" #this method is the same as in jukebox.rb
+end
+
+
