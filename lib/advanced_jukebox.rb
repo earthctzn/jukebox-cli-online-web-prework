@@ -60,13 +60,13 @@ def run(my_songs)
     puts "Please enter a command:" 
     response = gets.chomp 
     if response == "list"
-    list(my_songs)
+      list(my_songs)
     elsif response == "play"
-    play(my_songs)
+      play(my_songs)
     elsif response == "help"
-    help
+      help
     elsif response == "exit"
-    exit_jukebox
+      exit_jukebox
     break
    end
 end
