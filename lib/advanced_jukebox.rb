@@ -23,8 +23,8 @@ end
 
 
 def list(my_songs)
-  my_songs.collect#this method is different! Collect the keys of the my_songs hash and 
-  #list the songs by name
+#this method is different! Collect the keys of the my_songs hash and 
+  #list the songs by name  my_songs.collect
 end
 
 
