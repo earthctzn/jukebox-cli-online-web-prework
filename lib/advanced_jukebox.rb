@@ -14,7 +14,7 @@
 
 def help
   commands = {"h" => "help", "l" => "list", "p" => "play", "e" => "exit"}
-    puts commands
+  commands.each do |
 end
 
 
