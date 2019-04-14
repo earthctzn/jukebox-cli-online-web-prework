@@ -58,7 +58,7 @@ def run(my_songs)
   #this method is the same as in jukebox.rb
   help
   loop.do 
-    puts "Please enter a command:"
+  puts "Please enter a command:"
   response = gets.chomp
   if response == "list"
     list(my_songs)
