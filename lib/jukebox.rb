@@ -33,6 +33,7 @@ def list(my_songs)
   my_songs.collect { |song, file| puts "#{song}"}
 end
 
+def play(songs)
 puts "Please enter a song name or number:"
   requested_song = gets.chomp
   songs.each_with_index do |song, i|
